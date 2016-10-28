@@ -1,7 +1,9 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack-plugin');
+// const StatsPlugin = require('stats-webpack-plugin');
 const webpack = require('webpack');
+ 
 
 exports.devServer = function(options) {
   return {
@@ -144,3 +146,14 @@ exports.purifyCSS = function(paths) {
     ]
   }
 }
+
+// exports.stats = function() {
+//   return {
+//     plugins: [
+//       new StatsPlugin('stats.json', {
+//         chunkModules: true,
+//         exclude: [/node_modules[\\\/]react/]
+//       })
+//     ]
+//   }
+// };
